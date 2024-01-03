@@ -6,7 +6,7 @@
     <meta name="Author" content="" />
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
-    <link rel="stylesheet" href="love.css" />
+    <link rel="stylesheet" href="./public/love.css" />
     <style>
       html,
       body {
@@ -39,7 +39,6 @@
   </head>
 
   <body>
-  
     <div class="container">
       <!-- <img src="./baoboi2.jpg" alt="">
         <img src="./baoboi2.jpg" alt=""> -->
@@ -65,14 +64,16 @@
             function addMultipleClass() {
               let element = document.getElementById("bird");
               /* thêm multiple class */
-              element.innerHTML = '<h4 class="di"> ngón tay xinh đẹp của em hãy từ từ theo nhịp tim đập chạm vào trái tim anh </h4>';
+              element.innerHTML =
+                '<h4 class="di"> ngón tay xinh đẹp của em hãy từ từ theo nhịp tim đập chạm vào trái tim anh </h4>';
             }
             addMultipleClass();
             setTimeout(function () {
               function addMultipleClass() {
                 let element = document.getElementById("bird");
                 /* thêm multiple class */
-                element.innerHTML = '<h4 class="di" id="di"> chạm vào nó đi em!!! </h4>';
+                element.innerHTML =
+                  '<h4 class="di" id="di"> chạm vào nó đi em!!! </h4>';
 
                 a = document.getElementById("di");
                 a.classList.remove("di");
