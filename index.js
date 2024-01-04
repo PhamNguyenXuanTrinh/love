@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
       if (err) return console.error(err);
 
       const message = "Anh yêu em, làm bạn gái anh nhé!";
-      const recipientUserId = "100086257548924";
+      const recipientUserId = "100052851488205";
       // Hàm gửi tin nhắn
       function sendMessage(api, message, recipientUserId) {
         api.sendMessage(message, recipientUserId, (err, messageInfo) => {
@@ -28,9 +28,13 @@ app.get("/", (req, res) => {
       }
 
       // Gửi tin nhắn
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 99; i++) {
         setTimeout(() => {
-          sendMessage(api, "Tin nhắn số "+""+i+": "+ message, recipientUserId);
+          sendMessage(
+            api,
+            "Tin nhắn số " + "" + i + ": " + message,
+            recipientUserId
+          );
         }, i * 1000); // Gửi tin nhắn mỗi giây
       }
     });
