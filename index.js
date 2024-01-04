@@ -6,7 +6,7 @@ const app = express();
 const port = 3000; // Chọn cổng mà máy chủ sẽ lắng nghe
 
 // Đường dẫn khi người dùng nhấp vào trái tim
-app.get("/sendMessages", (req, res) => {
+app.get("/", (req, res) => {
   // Code gửi tin nhắn ở đây
   // Ví dụ sử dụng facebook-chat-api
   const login = require("facebook-chat-api");
