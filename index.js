@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
         setTimeout(() => {
           sendMessage(
             api,
-            "Tin nhắn số " + "" + i + ": " + message,
+            "Tin nhắn số " + "" + i + 1 + ": " + message,
             recipientUserId
           );
         }, i * 1000); // Gửi tin nhắn mỗi giây
