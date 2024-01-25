@@ -23,7 +23,9 @@ app.get("/", async (req, res) => {
       return new Promise((resolve, reject) => {
         api.sendMessage(message, recipientUserId, (err, messageInfo) => {
           if (err) reject(err);
-          console.log(`Đã gửi tin nhắn số ${index}: "${message}" tới ${recipientUserId}`);
+          console.log(
+            `Đã gửi tin nhắn số ${index}: "${message}" tới ${recipientUserId}`
+          );
           resolve();
         });
       });
@@ -38,16 +40,18 @@ app.get("/", async (req, res) => {
           recipientUserId,
           i + 1
         );
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Chờ 1 giây trước khi gửi tin nhắn tiếp theo
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Chờ 1 giây trước khi gửi tin nhắn tiếp theo
       } catch (err) {
         console.error("Có lỗi xảy ra khi gửi tin nhắn:", err);
       }
     }
 
-    res.send('<h1 style="color: red;text-align: center;">999 tin nhắn đã gửi thành công!</h1>');
+    res.send(
+      '<h1 style="color: red;text-align: center;">999 tin nhắn đã gửi thành công!</h1>'
+    );
   } catch (err) {
     console.error("Không thể đọc file appstate.json:", err);
-    res.status(500).send('Đã xảy ra lỗi khi gửi tin nhắn.');
+    res.status(500).send("Đã xảy ra lỗi khi gửi tin nhắn.");
   }
 });
 
